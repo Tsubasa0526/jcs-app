@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCS簡易計測</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JCSスケール学習アプリ</h1>
+        </header>
+
+        <div class="tab-buttons">
+            <button id="mode-measure-btn" class="tab-button active">計測モード</button>
+            <button id="mode-learn-btn" class="tab-button">学習モード</button>
+        </div>
+
+        <!-- 計測モード -->
+        <main id="measure-mode" class="mode-content active">
+            <div id="score-display-box">
+                <span id="score-display">-</span>
+            </div>
+            <div id="jcs-buttons-wrapper">
+                <!-- JCSボタンはJSで生成 -->
+            </div>
+            <button id="reset-button">リセット</button>
+        </main>
+
+        <!-- 学習モード -->
+        <main id="learn-mode" class="mode-content">
+            <div id="quiz-card">
+                <div id="question-area">ここに問題が表示されます。</div>
+                <div id="answer-options">
+                    <!-- 選択肢はJSで生成 -->
+                </div>
+                <div id="feedback-area"></div>
+                <button id="next-question" style="display: none;">次の問題へ</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
